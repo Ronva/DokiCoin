@@ -42,24 +42,32 @@ export default class App extends React.Component {
           </Content>
           <Content
             name="natsuki"
-            background="pink"
-            title="Information">
+            background="pink">
             <LazyLoad offsetHorizontal={50}>
               <img src={require('./assets/Promo_art/natsuki_promo_small.png')} alt="Natsuki" />
             </LazyLoad>
+            <div className="contentBody">
+              <h1 className="title">Information</h1>
+              <p>Type stuff here</p>
+            </div>
           </Content>
           <Content
             name="yuri"
-            background="purple"
-            title="Resources">
+            background="purple">
             <LazyLoad offsetHorizontal={50}>
               <img src={require('./assets/Promo_art/yuri_promo_small.png')} alt="Yuri" />
             </LazyLoad>
+            <div className="contentBody">
+              <h1 className="title">Resources</h1>
+              <p>Type stuff here</p>
+            </div>
           </Content>
           <Content name="block-chan" background="green">
             <img src={require('./assets/block-chan.png')} alt="block-chan diagram" className="diagram"/>
           </Content>
-          <Content name="live-feed" background="red" />
+          <Content name="live-feed" background="red">
+            <img src={require('./assets/01.png')} alt=""/>
+          </Content>
           <Content />
         </div>
       </div>
