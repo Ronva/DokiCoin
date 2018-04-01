@@ -1,0 +1,48 @@
+.poseContainer {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+  z-index: 3;
+  img {
+    position: relative;
+    object-fit: contain;
+    transform: translate3d(0, 0, 1px);
+    z-index: 3;
+  }
+  $base: 30%;
+  // 120pt for fixed poses
+  $left: 120pt;
+  .natsuki {
+    //left: $left;
+    width: $base;
+    max-height: 94vh;
+    z-index: 4;
+  }
+  .monika {
+    //left: $left + 72pt;
+    transform: translateY(-5%);
+    width: $base * 1.6;
+    max-height: 98vh;
+    margin-left: -15%;
+    z-index: 1;
+  }
+  .sayori {
+    //left: $left + 200pt;
+    width: $base * 1.05;
+    max-height: 95vh;
+    margin-left: -24%;
+    z-index: 2;
+  }
+  .yuri {
+    //left: $left + 248pt;
+    width: $base * 1.4;
+    max-height: 100vh;
+    margin-left: -23%;
+    z-index: 3;
+  }
+}

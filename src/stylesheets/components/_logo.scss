@@ -1,0 +1,14 @@
+.logo {
+  position: relative;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  height: 90%;
+  margin-right: auto;
+  outline: transparent;
+  z-index: 99;
+  transition: transform .2s ease-in;
+  path:first-of-type {
+    stroke-width: 10px;
+    stroke-linejoin: round;
+  }
+}

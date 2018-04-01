@@ -1,0 +1,79 @@
+.background {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr 48pt;
+  grid-template-rows: 16pt 1fr 16pt;
+  min-width: 640pt;
+  height: 88vh;
+  margin: 16pt 32pt;
+  color: $bg;
+  .LazyLoad {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    img {
+      height: 95%;
+      align-self: center;
+      transition: opacity .2s ease-in;
+    }
+  }
+  &.red {
+    background: $red;
+  }
+  &.pink {
+    background: $pink;
+  }
+  &.green {
+    background: $green;
+  }
+  .title {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 2.4em;
+    text-shadow: 1pt 1pt $text-color;
+  }
+  .next {
+    grid-column: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    line-height: 100%;
+    color: $bg;
+    font-size: 4em;
+    border-left: 5px solid $bg;
+    cursor: pointer;
+  }
+
+  &:last-of-type {
+    min-width: 16pt;
+  }
+}
+
+.getStarted {
+  @include abs-center;
+  width: 100%;
+  color: $text-color;
+  text-align: center;
+  h1 {
+    font-size: 2.4em;
+  }
+  a {
+    display: inline-block;
+    margin: 8pt 0;
+    padding: 8pt 16pt;
+    background: $purple;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: $bg;
+  }
+}
