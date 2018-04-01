@@ -20,38 +20,21 @@ const replaceVerticalScrollByHorizontal = (event) => {
 window.addEventListener('wheel', replaceVerticalScrollByHorizontal);
 
 export default class App extends React.Component {
-  state = {
-    scrolled: window.addEventListener('scroll', () => {return document.all ? iebody.scrollLeft : pageXOffset}),
-    show: {
-      natsuki: false,
-      sayori: false,
-      yuri: false
-    }
-  };
-
-  revealImage = (image) => {
-    const images = this.state.show;
-    images[image] = true;
-    console.log(images);
-
-    this.setState({
-      show: images
-    });
-  };
-
   render() {
-    const scrolled = this.state.scrolled;
-
     return (
       <div className="app">
         <div className="nav">
           <Logo />
-          <a href="#natsuki" className="menuBtn">Information</a>
-          <a href="#sayori" className="menuBtn">Resources</a>
-          <a href="#yuri" className="menuBtn">Blah</a>
+          <a href="#natsuki" className="menuBtn pink">Information</a>
+          <a href="#yuri" className="menuBtn purple">Resources</a>
+          <a href="#block-chan" className="menuBtn green">Block-chan</a>
+          <a href="#live-feed" className="menuBtn red">Live Feed</a>
         </div>
         <div className="background">
           <Content>
+            <LazyLoad offsetHorizontal={50}>
+              <img src={require('./assets/Promo_art/sayori_promo_small.png')} alt="Sayori" />
+            </LazyLoad>
             <div className="getStarted">
               <h1>DokiCoin is a decentralized cryptocurrency designed to create the perfect waifu and make anime real.</h1>
               <a href="#natsuki">Get Started</a>
@@ -60,30 +43,23 @@ export default class App extends React.Component {
           <Content
             name="natsuki"
             background="pink"
-            title="Information"
-            reveal={this.revealImage}>
-            <LazyLoad offsetHorizontal={50} onContentVisible={() => this.revealImage('natsuki')}>
-              <img src={require('./assets/Promo_art/natsuki_promo_small.png')} alt="Natsuki" data-show={this.state.show["natsuki"]} />
-            </LazyLoad>
-          </Content>
-          <Content
-            name="sayori"
-            background="red"
-            title="Resources"
-            reveal={this.revealImage}>
-            <LazyLoad offsetHorizontal={50} onContentVisible={() => this.revealImage('sayori')}>
-              <img src={require('./assets/Promo_art/sayori_promo_small.png')} alt="Sayori" data-show={this.state.show["natsuki"]} />
+            title="Information">
+            <LazyLoad offsetHorizontal={50}>
+              <img src={require('./assets/Promo_art/natsuki_promo_small.png')} alt="Natsuki" />
             </LazyLoad>
           </Content>
           <Content
             name="yuri"
-            background="green"
-            title="Blah"
-            reveal={this.revealImage}>
-            <LazyLoad offsetHorizontal={50} onContentVisible={() => this.revealImage('yuri')}>
-              <img src={require('./assets/Promo_art/yuri_promo_small.png')} alt="Yuri" data-show={this.state.show["natsuki"]} />
+            background="purple"
+            title="Resources">
+            <LazyLoad offsetHorizontal={50}>
+              <img src={require('./assets/Promo_art/yuri_promo_small.png')} alt="Yuri" />
             </LazyLoad>
           </Content>
+          <Content name="block-chan" background="green">
+            <img src={require('./assets/block-chan.png')} alt="block-chan diagram" className="diagram"/>
+          </Content>
+          <Content name="live-feed" background="red" />
           <Content />
         </div>
       </div>
