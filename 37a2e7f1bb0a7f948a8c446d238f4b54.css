@@ -208,11 +208,8 @@ a {
   z-index: 2; }
 
 .background {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: end;
-      align-items: flex-end;
   height: 100%;
+  padding: 48pt 0;
   z-index: 1; }
 
 .content {
@@ -220,9 +217,8 @@ a {
   display: grid;
   grid-template-columns: auto 1fr 48pt;
   grid-template-rows: 16pt 1fr 16pt;
-  min-width: 640pt;
   height: 88vh;
-  margin: 16pt 0 16pt 64pt;
+  margin: 32pt 64pt;
   color: white; }
   .content.red {
     background: #FD7379; }
@@ -251,7 +247,9 @@ a {
     grid-column: 1/-1;
     grid-row: 1/-1;
     max-width: 100%;
-    max-height: 100%; }
+    max-height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain; }
   .content .contentBody {
     grid-column: 2/3;
     grid-row: 2/3;
@@ -307,16 +305,17 @@ a {
   grid-row: 1/-1;
   display: -ms-flexbox;
   display: flex;
+  justify-self: center;
   -ms-flex-item-align: center;
       align-self: center; }
 
-#live-feed {
-  min-width: 368pt;
+#live-feed ~ .content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: auto;
   padding: 8pt 0; }
-  #live-feed img {
-    display: -ms-flexbox;
-    display: flex;
-    justify-self: center; }
 
 /* _-_-_- modules/BUTTONS -_-_-_ */
 button {
