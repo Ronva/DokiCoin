@@ -1,0 +1,344 @@
+@font-face {
+  font-family: "Riffic Free";
+  src: local("RifficFree-Bold");
+  font-weight: bold; }
+
+@font-face {
+  font-family: "Riffic Free";
+  src: local("RifficFree-Bold");
+  font-weight: bold; }
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/* _-_-_- base/BASE -_-_-_ */
+body {
+  background: white;
+  color: #2D2D2D;
+  font-family: "Riffic Free", sans-serif;
+  line-height: 1.4;
+  background: -webkit-radial-gradient(#FFD6EE 20%, transparent 0) fixed, -webkit-radial-gradient(#FFD6EE 20%, transparent 0) fixed;
+  background: -o-radial-gradient(#FFD6EE 20%, transparent 0) fixed, -o-radial-gradient(#FFD6EE 20%, transparent 0) fixed;
+  background: radial-gradient(#FFD6EE 20%, transparent 0) fixed, radial-gradient(#FFD6EE 20%, transparent 0) fixed;
+  background-position: 0 0, 40pt 40pt;
+  background-size: 80pt 80pt; }
+
+.clearfix {
+  overflow: auto;
+  zoom: 1; }
+
+a {
+  color: #2D2D2D; }
+
+/* _-_-_- base/TYPOGRAPHY -_-_-_ */
+.nav {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+  height: 48pt;
+  padding: 0 16pt;
+  background: rgba(255, 214, 238, 0.5);
+  z-index: 99; }
+  .nav .menuBtn {
+    height: 100%;
+    padding: 0 3vw;
+    line-height: 48pt;
+    font-size: 1.2em;
+    cursor: pointer;
+    -webkit-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease; }
+    .nav .menuBtn:hover {
+      color: white;
+      text-shadow: 2px 2px 1px #2D2D2D; }
+      .nav .menuBtn:hover.red {
+        background: #FD7379; }
+      .nav .menuBtn:hover.pink {
+        background: #FFD6EE; }
+      .nav .menuBtn:hover.purple {
+        background: #BE83F1; }
+      .nav .menuBtn:hover.green {
+        background: #A0FE9E; }
+
+.poseContainer {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  position: fixed;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 40%;
+  height: 100%;
+  z-index: 3; }
+  .poseContainer img {
+    position: relative;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -webkit-transform: translate3d(0, 0, 1px);
+            transform: translate3d(0, 0, 1px);
+    z-index: 3; }
+  .poseContainer .natsuki {
+    width: 30%;
+    max-height: 94vh;
+    z-index: 4; }
+  .poseContainer .monika {
+    -webkit-transform: translateY(-5%);
+        -ms-transform: translateY(-5%);
+            transform: translateY(-5%);
+    width: 48%;
+    max-height: 98vh;
+    margin-left: -15%;
+    z-index: 1; }
+  .poseContainer .sayori {
+    width: 31.5%;
+    max-height: 95vh;
+    margin-left: -24%;
+    z-index: 2; }
+  .poseContainer .yuri {
+    width: 42%;
+    max-height: 100vh;
+    margin-left: -23%;
+    z-index: 3; }
+
+.mainHeader {
+  width: 100vw;
+  height: 100%;
+  z-index: 2; }
+
+.background {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  height: 100%;
+  z-index: 1; }
+
+.content {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr 48pt;
+  grid-template-rows: 16pt 1fr 16pt;
+  min-width: 640pt;
+  height: 88vh;
+  margin: 16pt 0 16pt 64pt;
+  color: white; }
+  .content .LazyLoad {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    height: 100%; }
+    .content .LazyLoad img {
+      height: 95%;
+      -ms-flex-item-align: center;
+          align-self: center;
+      -webkit-transition: opacity .2s ease-in;
+      -o-transition: opacity .2s ease-in;
+      transition: opacity .2s ease-in; }
+  .content img {
+    max-width: 100%; }
+  .content.red {
+    background: #FD7379; }
+  .content.pink {
+    background: #FFD6EE; }
+  .content.purple {
+    background: #BE83F1; }
+  .content.green {
+    background: #A0FE9E; }
+  .content .title {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 2.4em;
+    text-shadow: 1pt 1pt #2D2D2D; }
+  .content .next {
+    grid-column: 3/4;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    height: 100%;
+    line-height: 100%;
+    color: white;
+    font-size: 4em;
+    border-left: 5px solid white;
+    cursor: pointer; }
+  .content:first-of-type {
+    min-width: 80vw;
+    margin: 0 10vw; }
+  .content:last-of-type {
+    min-width: 16pt; }
+
+.getStarted {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  color: white;
+  text-shadow: 1px 1px 4px #2D2D2D;
+  text-align: center; }
+  .getStarted h1 {
+    font-size: 2.4em; }
+  .getStarted a {
+    display: inline-block;
+    margin: 8pt 0;
+    padding: 8pt 16pt;
+    background: #BE83F1;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: white; }
+
+.diagram {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center; }
+
+/* _-_-_- modules/BUTTONS -_-_-_ */
+button {
+  outline: none;
+  border: none;
+  cursor: pointer; }
+
+input[type=text] {
+  outline-width: 2px;
+  -webkit-transition: outline .1s ease-in;
+  -o-transition: outline .1s ease-in;
+  transition: outline .1s ease-in; }
+  input[type=text]:valid {
+    outline-color: #00cd00; }
+  input[type=text]:invalid {
+    outline-color: #ff0a0a; }
+
+.logo {
+  position: relative;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  height: 90%;
+  margin-right: auto;
+  outline: transparent;
+  z-index: 99;
+  -webkit-transition: -webkit-transform .2s ease-in;
+  transition: -webkit-transform .2s ease-in;
+  -o-transition: transform .2s ease-in;
+  transition: transform .2s ease-in;
+  transition: transform .2s ease-in, -webkit-transform .2s ease-in; }
+  .logo path:first-of-type {
+    stroke-width: 10px;
+    stroke-linejoin: round; }
+
+/* _-_-_- pages/ABOUT -_-_-_ */
+/* _-_-_- pages/CONTACT -_-_-_ */
+/* _-_-_- pages/HOME -_-_-_ */
