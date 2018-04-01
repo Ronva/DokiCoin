@@ -1,13 +1,3 @@
-@font-face {
-  font-family: "Riffic Free";
-  src: local("RifficFree-Bold");
-  font-weight: bold; }
-
-@font-face {
-  font-family: "Riffic Free";
-  src: local("RifficFree-Bold");
-  font-weight: bold; }
-
 /*
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -105,7 +95,7 @@ input, select {
 body {
   background: white;
   color: #2D2D2D;
-  font-family: "Riffic Free", sans-serif;
+  font-family: "Lato", sans-serif;
   line-height: 1.4;
   background: -webkit-radial-gradient(#FFD6EE 20%, transparent 0) fixed, -webkit-radial-gradient(#FFD6EE 20%, transparent 0) fixed;
   background: -o-radial-gradient(#FFD6EE 20%, transparent 0) fixed, -o-radial-gradient(#FFD6EE 20%, transparent 0) fixed;
@@ -136,13 +126,14 @@ a {
   width: 100%;
   height: 48pt;
   padding: 0 16pt;
-  background: rgba(255, 214, 238, 0.5);
+  background: white;
   z-index: 99; }
   .nav .menuBtn {
     height: 100%;
     padding: 0 3vw;
     line-height: 48pt;
     font-size: 1.2em;
+    font-weight: bold;
     cursor: pointer;
     -webkit-transition: all .25s ease;
     -o-transition: all .25s ease;
@@ -214,17 +205,18 @@ a {
 
 .content {
   position: relative;
-  display: grid;
-  grid-template-columns: auto 1fr 48pt;
-  grid-template-rows: 16pt 1fr 16pt;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: 88vh;
-  margin: 32pt 64pt;
+  margin: 32pt 5vw;
   color: white; }
-  .content.red {
+  .content.red .contentBody {
     background: #FD7379; }
-  .content.pink {
+  .content.pink .contentBody {
     background: #FFD6EE; }
-  .content.purple {
+  .content.purple .contentBody {
     background: #BE83F1; }
   .content.green {
     background: #A0FE9E; }
@@ -253,12 +245,15 @@ a {
   .content .contentBody {
     grid-column: 2/3;
     grid-row: 2/3;
-    font-size: 1.4em;
-    text-shadow: 1pt 1pt #2D2D2D; }
+    padding: 8pt 16pt;
+    font-size: 1.4em; }
     .content .contentBody .title {
-      font-size: 2.4em; }
+      font-size: 2em;
+      text-shadow: 1pt 1pt #2D2D2D;
+      font-family: "Riffic Free", sans-serif; }
     .content .contentBody p {
-      margin-bottom: .5em; }
+      margin-bottom: .5em;
+      color: #2D2D2D; }
     .content .contentBody a {
       display: block;
       color: #FFD6EE; }
